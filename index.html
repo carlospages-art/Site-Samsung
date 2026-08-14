@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Shop - Celulares Premium</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🔷 Samsung</h1>
+                    <p>Tecnologia que Conecta</p>
+                </div>
+                <div class="header-actions">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar celular...">
+                    <button class="cart-btn" id="cartBtn">🛒 Carrinho (<span id="cartCount">0</span>)</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Descobra os Melhores Celulares Samsung</h2>
+            <p>Tecnologia inovadora ao alcance de suas mãos</p>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filters-section">
+        <div class="container">
+            <h3>Filtrar por:</h3>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+                <button class="filter-btn" data-filter="intermediario">Intermediário</button>
+                <button class="filter-btn" data-filter="basico">Básico</button>
+            </div>
+            <div class="price-filter">
+                <label>Preço Máximo: R$ <span id="priceValue">5000</span></label>
+                <input type="range" id="priceRange" min="1000" max="10000" value="5000" step="100">
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="products-section">
+        <div class="container">
+            <div id="productList" class="products-grid">
+                <!-- Produtos carregados dinamicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Detalhes -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Produto">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalCategory" class="category-badge"></p>
+                    <p id="modalDescription"></p>
+                    <div class="specs">
+                        <h4>Especificações:</h4>
+                        <ul id="modalSpecs"></ul>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="price-info">
+                            <span class="original-price" id="modalOriginalPrice"></span>
+                            <span class="final-price" id="modalPrice"></span>
+                        </div>
+                        <button class="add-to-cart-btn" id="addToCartBtn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrinho Lateral -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Meu Carrinho</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <!-- Itens do carrinho -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total:</strong>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+            <button class="clear-cart-btn" id="clearCartBtn">Limpar Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre</h4>
+                    <p>Sua loja oficial de celulares Samsung com os melhores preços e modelos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Email: contato@samsungshop.com.br</p>
+                    <p>Tel: (11) 3000-0000</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <p>📱 Instagram | 📘 Facebook | 𝕏 Twitter</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Samsung Shop. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
